@@ -32,6 +32,7 @@ public class AdvancedAstrology {
         printStars(3);
         printSpaces(height-2);
         printStars(3);
+        
     }
 
     public static void main(String[] args) {
@@ -42,5 +43,7 @@ public class AdvancedAstrology {
         christmasTree(4);
         System.out.println("---");
         christmasTree(10);
+        System.out.println("---");
+        christmasTree(20);
     }
 }
