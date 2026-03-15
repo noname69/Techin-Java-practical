@@ -3,15 +3,19 @@ package org.example;
 public class Hangman {
     private final String wordToGuess;
     private String guessedWord;
-    public int misses;
+    private int misses;
+    private int guesses;
 
-    public Hangman(String wordToGuess) {
+    public Hangman(String wordToGuess, int numberOfGuesses) {
         this.wordToGuess = wordToGuess.trim().toLowerCase();
         this.guessedWord = "*".repeat(wordToGuess.length());
+        this.guesses = numberOfGuesses;
     }
 
     public void display() {
-        System.out.print("Enter a letter in word " + this.guessedWord + " ");
+        System.out.println("Guesses left: " + this.guesses);
+        System.out.println("Word: " + this.guessedWord);
+        System.out.print("Enter a letter: ");
     }
 
     public boolean guessLetter(char letter) {
@@ -19,8 +23,9 @@ public class Hangman {
         boolean found = false;
 
         int index = this.wordToGuess.indexOf(letter);
-        if(index >= 0 && this.guessedWord.charAt(index) == letter) {
-            System.out.println(letter + " is already in the world");
+        if (this.guessedWord.indexOf(letter) >= 0) {
+            System.out.println(letter + " is already guessed.");
+            return true;
         }
 
         if(index >= 0) {
@@ -29,12 +34,12 @@ public class Hangman {
 
         while (index >= 0) {
             this.guessedWord = this.guessedWord.substring(0,index)+letter+this.guessedWord.substring(index+1);
-//            System.out.println(index);
             index = wordToGuess.indexOf(letter, index + 1);
         }
 
         if(!found) {
             this.misses++;
+            this.guesses -= 1;
         }
 
         return found;
@@ -42,10 +47,21 @@ public class Hangman {
 
     public boolean winner() {
         return guessedWord.equals(wordToGuess);
+    }
+
+    public boolean loser() {
+        return this.guesses == 0;
+    }
+
+    public int getMisses() {
+        return this.misses;
+    }
+
+    public void resetGame() {
 
     }
 
-//    public boolean looser() {}
+
 
 
 
