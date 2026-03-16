@@ -7,7 +7,7 @@ public class Account {
     private String name;
     private int balance;
 
-    public Account(String name, String id) {
+    public Account( String id, String name) {
         this.name = name;
         this.id = id;
     }
@@ -19,11 +19,11 @@ public class Account {
     }
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public int getBalance() {
@@ -31,28 +31,28 @@ public class Account {
     }
 
     public int credit(int amount) {
-        return balance += amount;
+        return this.balance += amount;
     }
 
     public int debit(int amount) {
-        if(amount <= balance) {
-            balance -= amount;
+        if(amount <= this.balance) {
+            this.balance -= amount;
         }
         else {
             System.out.println("Amount exceeded balance");
         }
-        return balance;
+        return this.balance;
     }
 
     public int transferTo(Account another, int amount) {
-        if(amount <= balance) {
+        if(amount <= this.balance) {
             this.debit(amount);
             another.credit(amount);
         }
         else {
             System.out.println("Amount exceeded balance");
         }
-        return balance;
+        return this.balance;
     }
 
     @Override

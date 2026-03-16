@@ -14,23 +14,23 @@ public class Employee {
     }
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public String getFirstName() {
-        return firstName;
+        return this.firstName;
     }
 
     public String getLastName() {
-        return lastName;
+        return this.lastName;
     }
 
     public int getSalary() {
-        return salary;
+        return this.salary;
     }
 
     public String getName() {
-        return firstName + " " + lastName;
+        return this.firstName + " " + this.lastName;
     }
 
     public void setSalary(int salary) {
@@ -38,11 +38,12 @@ public class Employee {
     }
 
     public int getAnnualSalary() {
-        return salary * 12;
+        return this.salary * 12;
     }
 
     public int raiseSalary(int percent) {
-        return salary = salary + salary * (percent / 100);
+        this.salary = this.salary + this.salary * (int)(percent / 100.0);
+        return this.salary;
     }
 
     @Override
