@@ -57,12 +57,10 @@ public class Account {
 
     @Override
     public String toString() {
-        LocalDate date = LocalDate.now();
-
-        int month = date.getMonthValue(); // 1 to 12
-        int day = date.getDayOfMonth();
-        int year = date.getYear();
-
-        return String.format("%02d/%02d/%04d", day, month, year);
+        return "Account{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", balance=" + balance +
+                '}';
     }
 }
