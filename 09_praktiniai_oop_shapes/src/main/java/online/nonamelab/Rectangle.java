@@ -36,6 +36,11 @@ public class Rectangle extends Shape {
         this.length = length;
     }
 
+    public void setSide(double side) {
+        width = side;
+        length = side;
+    }
+
     @Override
     public double getArea() {
         return width * length;

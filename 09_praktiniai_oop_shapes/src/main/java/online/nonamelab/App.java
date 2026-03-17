@@ -13,6 +13,8 @@ public class App {
 //        System.out.println(pentagon);
 //        System.out.println(pentagon.getArea());
 
+        square2.setWidth(10);
+
         ArrayList<Shape> figures = new ArrayList<>();
 
         figures.add(circle);
@@ -20,6 +22,7 @@ public class App {
         figures.add(square);
         figures.add(pentagon);
         figures.add(square2);
+
 
         for (Shape figure : figures) {
             System.out.println(figure);
