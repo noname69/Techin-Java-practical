@@ -7,7 +7,7 @@ public class App {
         Circle circle = new Circle(1.5, "blue", false);
         Rectangle rectangle = new Rectangle(10, 50);
         Square square = new Square(12);
-        Square square2 = new Square(0.8);
+        Square square2 = new Square();
         RegularPentagon pentagon = new RegularPentagon(5);
 
 //        System.out.println(pentagon);
@@ -34,15 +34,16 @@ public class App {
         System.out.println("Figures area sum: " + figuresAreasSum);
 
         double figurePerimeter = 0;
-        Shape f = new Shape();
+
+        Shape maxPerimeterFigure = figures.getFirst();
 
         for (Shape figure : figures) {
             if (figurePerimeter < figure.getPerimeter()) {
                 figurePerimeter = figure.getPerimeter();
-                f = figure;
+                maxPerimeterFigure = figure;
             }
         }
-        System.out.println("Figure with biggest perimeter is: " + f.getClass().getSimpleName());
+        System.out.println("Figure with biggest perimeter is: " + maxPerimeterFigure.getClass().getSimpleName());
 
         int i = 0;
         System.out.println("Squeres sides:");

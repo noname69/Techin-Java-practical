@@ -2,7 +2,7 @@ package online.nonamelab;
 
 import java.util.ArrayList;
 
-public class Shape {
+abstract class Shape {
     private String color;
     private boolean filled;
 
@@ -32,13 +32,17 @@ public class Shape {
         this.filled = filled;
     }
 
-    public double getArea() {
-        return 0;
-    };
+//    public double getArea() {
+//        return 0;
+//    };
+//
+//    public double getPerimeter() {
+//        return 0;
+//    };
 
-    public double getPerimeter() {
-        return 0;
-    };
+    public abstract double getArea();
+
+    public abstract double getPerimeter();
 
     @Override
     public String toString() {
