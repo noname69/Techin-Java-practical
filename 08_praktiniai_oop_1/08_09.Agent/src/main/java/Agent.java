@@ -12,7 +12,7 @@ public class Agent {
 
     @Override
     public String toString() {
-        return "My name is " + this.lastName + ", " + this.firstName + " " + this.lastName;
+        return "My name is " + lastName + ", " + firstName + " " + lastName;
     }
 
 

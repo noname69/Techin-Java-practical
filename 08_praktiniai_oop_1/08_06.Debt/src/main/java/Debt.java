@@ -8,10 +8,10 @@ public class Debt {
     }
 
     public void printBalance() {
-        System.out.println(this.balance);
+        System.out.println(balance);
     }
 
     public void waitOneYear() {
-        this.balance = this.balance * this.interestRate;
+        balance = balance * interestRate;
     }
 }

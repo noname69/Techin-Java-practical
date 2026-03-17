@@ -4,22 +4,22 @@ public class Gauge {
     public Gauge() {}
 
     public void increase() {
-        if (!this.full()) {
-            this.value++;
+        if (!full()) {
+            value++;
         }
     }
 
     public void decrease() {
-        if (this.value != 0) {
-            this.value--;
+        if (value != 0) {
+            value--;
         }
     }
 
     public int value() {
-        return this.value;
+        return value;
     }
 
     public boolean full() {
-        return this.value == 5;
+        return value == 5;
     }
 }

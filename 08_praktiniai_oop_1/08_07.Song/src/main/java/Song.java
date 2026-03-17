@@ -8,10 +8,10 @@ public class Song {
     }
 
     public String name() {
-        return this.name;
+        return name;
     }
 
     public int length() {
-        return this.length;
+        return length;
     }
 }

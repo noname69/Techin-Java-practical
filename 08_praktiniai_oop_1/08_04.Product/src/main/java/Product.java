@@ -10,6 +10,6 @@ public class Product {
     }
 
     public void printProduct() {
-        System.out.println(this.name + ", price" + this.price + ", " + this.quantity + " pcs");
+        System.out.println(name + ", price" + price + ", " + quantity + " pcs");
     }
 }

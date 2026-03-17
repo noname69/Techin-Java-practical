@@ -9,21 +9,21 @@ public class Statistics {
     }
 
     public void addNumber(int number) {
-        this.sum += number;
-        this.count += 1;
+        sum += number;
+        count += 1;
     }
 
     public int getCount() {
-        return this.count;
+        return count;
     }
 
     public int sum() {
-        return this.sum;
+        return sum;
     }
 
     public double average() {
-        if (this.count > 0) {
-            return (double) this.sum / this.count;
+        if (count > 0) {
+            return (double) sum / count;
         }
 
         return 0.0;

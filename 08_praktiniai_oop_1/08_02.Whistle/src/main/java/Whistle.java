@@ -6,6 +6,6 @@ public class Whistle {
     }
 
     public void sound() {
-        System.out.println(this.sound);
+        System.out.println(sound);
     }
 }

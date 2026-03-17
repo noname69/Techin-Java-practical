@@ -9,18 +9,18 @@ public class DecreasingCounter {
 
     public void printValue() {
         // Do not change this code!
-        System.out.println("value: " + this.value);
+        System.out.println("value: " + value);
     }
 
     public void decrement() {
         if(this.value != 0) {
-            this.value -= 1;
+            value -= 1;
         } else {
-            this.reset();
+            reset();
         }
     }
 
     public void reset() {
-        this.value = 0;
+        value = 0;
     }
 }
