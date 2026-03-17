@@ -17,22 +17,19 @@ public class Square extends Rectangle {
     }
 
     public void setSide(double side) {
-        setLength(side);
-        setWidth(side);
+        super.setLength(side);
+        super.setWidth(side);
     }
 
     @Override
     public void setWidth(double side) {
-//        super.setWidth(side);
-//        super.setLength(side);
-        super.setSide(side);
+
+        setSide(side);
     }
 
     @Override
     public void setLength(double side) {
-//        super.setWidth(side);
-//        super.setLength(side);
-        super.setSide(side);
+        setSide(side);
     }
 
     @Override
