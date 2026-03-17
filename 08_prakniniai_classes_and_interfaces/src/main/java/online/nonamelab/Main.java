@@ -57,6 +57,16 @@ public class Main {
         System.out.println(a1);
         System.out.println(a2);
 
+        Rectangle r = new Rectangle(10,20);
+
+        System.out.println(r);
+
+        Time t = new Time(23,59,59);
+        System.out.println(t);
+        t.nextSecond();
+//        System.out.println(newTime);
+
+
     }
 }
 
