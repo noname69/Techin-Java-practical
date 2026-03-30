@@ -38,6 +38,7 @@ public class StreamPraktiniai {
                 .mapToInt(u -> u.getAge() > 25 ? 1 : 0)
                 .sum();
     }
+    
 
     public static List<String> mapToUpperCase(List<String> strings){
         return strings.stream()
